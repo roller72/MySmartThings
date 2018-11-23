@@ -19,13 +19,13 @@ def version() {
 }
 
 preferences {
-	input("confIpAddr", "string", title:"Envoy Local IP Address",
+	input("confIpAddr", "string", title:"192.168.178.35",
 		required: true, displayDuringSetup: true)
-	input("confTcpPort", "number", title:"TCP Port",
+	input("confTcpPort", "number", title:"80",
 		defaultValue:"80", required: true, displayDuringSetup: true)
-	input("confNumInverters", "number", title:"Number of Inverters/Panels",
+	input("confNumInverters", "number", title:"12",
 		required: true, displayDuringSetup: true)
-	input("pollingInterval", "number", title:"Polling Interval (min)",
+	input("pollingInterval", "number", title:"5",
 		defaultValue:"5", range: "2..59", required: true, displayDuringSetup: true)
 	input(title: "", description: "Inverter Size (W)\n\nRated maximum power in Watts for each inverter\n\nUse '225' for M215 and '250' for M250", type: "paragraph", element: "paragraph", displayDuringSetup: true)
 	input("confInverterSize", "number", title:"",
